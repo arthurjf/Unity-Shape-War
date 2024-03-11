@@ -1,4 +1,3 @@
-using br.com.arthurjf.shapewar.Managers;
 using UnityEngine;
 
 namespace br.com.arthurjf.shapewar.Gameplay.Character
@@ -17,6 +16,13 @@ namespace br.com.arthurjf.shapewar.Gameplay.Character
         private float _maxRotationPerFrame;
         private float _smoothedVelocityInput;
         private float _smoothVelocity;
+
+        public int DefeatScoreEarn => m_defeatScoreEarn;
+
+        public Transform Target
+        {
+            set => m_target = value;
+        }
 
         private void Update()
         {
@@ -79,14 +85,6 @@ namespace br.com.arthurjf.shapewar.Gameplay.Character
         protected override void Move(float amount)
         {
             transform.Translate(amount * Time.fixedDeltaTime * transform.up, Space.World);
-        }
-
-        // POLYMORPHISM
-        protected override void Die()
-        {
-            ScoreModel.Score += m_defeatScoreEarn;
-
-            base.Die();
         }
 
         private float GetTargetAngle()

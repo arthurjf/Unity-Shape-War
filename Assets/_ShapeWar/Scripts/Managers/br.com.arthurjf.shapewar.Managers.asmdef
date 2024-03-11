@@ -2,7 +2,7 @@
     "name": "br.com.arthurjf.shapewar.Managers",
     "rootNamespace": "br.com.arthurjf.shapewar.Managers",
     "references": [
-        "GUID:b38c4338dc20579478bdba29bd67f2d8"
+        "br.com.arthurjf.shapewar.Gameplay.Character"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

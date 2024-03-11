@@ -1,9 +1,7 @@
 {
     "name": "br.com.arthurjf.shapewar.Gameplay.Character",
     "rootNamespace": "br.com.arthurjf.shapewar.Gameplay.Character",
-    "references": [
-        "GUID:8d2e467ad7cb7d84eaf5c87b474baa76"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

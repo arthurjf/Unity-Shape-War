@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace br.com.arthurjf.shapewar.Gameplay.Character
@@ -5,6 +6,8 @@ namespace br.com.arthurjf.shapewar.Gameplay.Character
     // ABSTRACTION
     public abstract class CharacterBase : MonoBehaviour
     {
+        public event Action<CharacterBase> OnDied;
+
         [SerializeField] private int m_health = 10;
         [SerializeField] protected float m_moveSpeed = 2f;
         [SerializeField] protected float m_rotateSpeed = 4f;
@@ -34,6 +37,8 @@ namespace br.com.arthurjf.shapewar.Gameplay.Character
 
         protected virtual void Die()
         {
+            OnDied?.Invoke(this);
+
             Destroy(gameObject);
         }
     }

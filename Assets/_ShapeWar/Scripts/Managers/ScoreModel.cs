@@ -8,6 +8,7 @@ namespace br.com.arthurjf.shapewar.Managers
 
         private static int score = 0;
 
+        // ENCAPSULATION
         public static int Score
         {
             get => score;
