@@ -1,0 +1,14 @@
+{
+    "name": "br.com.arthurjf.shapewar.Character",
+    "rootNamespace": "br.com.arthurjf.shapewar.Character",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
