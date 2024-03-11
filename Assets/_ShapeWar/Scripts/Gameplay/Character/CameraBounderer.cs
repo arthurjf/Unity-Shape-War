@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace br.com.arthurjf.shapewar.Character
+namespace br.com.arthurjf.shapewar.Gameplay.Character
 {
     public class CameraBounderer : MonoBehaviour
     {

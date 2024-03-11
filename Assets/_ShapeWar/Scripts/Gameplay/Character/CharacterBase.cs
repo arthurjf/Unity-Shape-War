@@ -1,7 +1,6 @@
-using br.com.arthurjf.shapewar.Weapon;
 using UnityEngine;
 
-namespace br.com.arthurjf.shapewar.Character
+namespace br.com.arthurjf.shapewar.Gameplay.Character
 {
     // ABSTRACTION
     public abstract class CharacterBase : MonoBehaviour

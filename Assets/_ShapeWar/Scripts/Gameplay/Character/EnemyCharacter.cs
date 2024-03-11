@@ -1,6 +1,7 @@
+using br.com.arthurjf.shapewar.Managers;
 using UnityEngine;
 
-namespace br.com.arthurjf.shapewar.Character
+namespace br.com.arthurjf.shapewar.Gameplay.Character
 {
     // INHERITANCE
     public class EnemyCharacter : CharacterBase
@@ -11,6 +12,7 @@ namespace br.com.arthurjf.shapewar.Character
         [SerializeField] private float m_sightRadius = 3f;
         [SerializeField] private float m_shootDistance = 6f;
         [SerializeField] private LayerMask m_layerMask;
+        [SerializeField] private int m_defeatScoreEarn = 50;
 
         private float _maxRotationPerFrame;
         private float _smoothedVelocityInput;
@@ -77,6 +79,14 @@ namespace br.com.arthurjf.shapewar.Character
         protected override void Move(float amount)
         {
             transform.Translate(amount * Time.fixedDeltaTime * transform.up, Space.World);
+        }
+
+        // POLYMORPHISM
+        protected override void Die()
+        {
+            ScoreModel.Score += m_defeatScoreEarn;
+
+            base.Die();
         }
 
         private float GetTargetAngle()

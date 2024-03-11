@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace br.com.arthurjf.shapewar.Character
+namespace br.com.arthurjf.shapewar.Gameplay.Character
 {
     // INHERITANCE
     public class PlayerCharacter : CharacterBase

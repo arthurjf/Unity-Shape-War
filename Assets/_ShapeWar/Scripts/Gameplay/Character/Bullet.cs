@@ -1,7 +1,6 @@
 using UnityEngine;
-using br.com.arthurjf.shapewar.Character;
 
-namespace br.com.arthurjf.shapewar.Weapon
+namespace br.com.arthurjf.shapewar.Gameplay.Character
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class Bullet : MonoBehaviour

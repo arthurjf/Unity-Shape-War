@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace br.com.arthurjf.shapewar.Weapon
+namespace br.com.arthurjf.shapewar.Gameplay.Character
 {
     public class Gun : MonoBehaviour
     {
