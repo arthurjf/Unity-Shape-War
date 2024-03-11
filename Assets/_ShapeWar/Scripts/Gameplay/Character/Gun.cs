@@ -7,6 +7,7 @@ namespace br.com.arthurjf.shapewar.Gameplay.Character
         [SerializeField] private GameObject m_bulletPrefab;
         [SerializeField] private Transform m_bulletExit;
         [SerializeField] private float fireRate = 0.5f;
+
         private float nextFireTime;
 
         public void AttemptShoot()

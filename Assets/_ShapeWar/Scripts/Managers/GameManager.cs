@@ -10,14 +10,13 @@ namespace br.com.arthurjf.shapewar.Managers
         public UnityEvent OnGameStart;
         public UnityEvent OnGameOver;
 
-        [SerializeField] private PlayerCharacter m_playerPrefab;
+        [SerializeField] private PlayerCharacter m_player;
         [SerializeField] private EnemyCharacter m_enemyPrefab;
         [SerializeField] private float m_enemySpawnInterval = 2f;
         [SerializeField] private WaypointsManager m_waypointsManager;
 
         private GameStates _state = GameStates.Home;
         private float _nextEnemySpawnTime = 0f;
-        private PlayerCharacter _player;
 
         public void StartGame()
         {
@@ -77,18 +76,16 @@ namespace br.com.arthurjf.shapewar.Managers
 
         private void InstantiatePlayer()
         {
-            PlayerCharacter playerInstance = Instantiate(m_playerPrefab, Vector3.zero, Quaternion.identity);
+            m_player.gameObject.SetActive(true);
 
-            playerInstance.OnDied += OnPlayerDied;
-
-            _player = playerInstance;
+            m_player.OnDied += OnPlayerDied;
         }
 
         private void InstantiateEnemy()
         {
             EnemyCharacter enemyInstance = Instantiate(m_enemyPrefab, m_waypointsManager.GetRandomWaypointPosition(), Quaternion.identity);
 
-            enemyInstance.Target = _player.transform;
+            enemyInstance.Target = m_player.transform;
 
             enemyInstance.OnDied += OnEnemyDied;
         }
