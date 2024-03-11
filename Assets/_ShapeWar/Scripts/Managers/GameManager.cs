@@ -18,6 +18,28 @@ namespace br.com.arthurjf.shapewar.Managers
         private GameStates _state = GameStates.Home;
         private float _nextEnemySpawnTime = 0f;
 
+        private void OnEnable()
+        {
+            CharacterBase.OnDied += OnCharacterDied;
+        }
+
+        private void OnDisable()
+        {
+            CharacterBase.OnDied -= OnCharacterDied;
+        }
+
+        private void OnCharacterDied(CharacterBase character)
+        {
+            if (character is PlayerCharacter)
+            {
+                OnPlayerDied(character);
+            }
+            else if (character is EnemyCharacter)
+            {
+                OnEnemyDied(character);
+            }
+        }
+
         public void StartGame()
         {
             _state = GameStates.NewGame;
@@ -78,7 +100,7 @@ namespace br.com.arthurjf.shapewar.Managers
         {
             m_player.gameObject.SetActive(true);
 
-            m_player.OnDied += OnPlayerDied;
+
         }
 
         private void InstantiateEnemy()
@@ -87,7 +109,6 @@ namespace br.com.arthurjf.shapewar.Managers
 
             enemyInstance.Target = m_player.transform;
 
-            enemyInstance.OnDied += OnEnemyDied;
         }
     }
 }

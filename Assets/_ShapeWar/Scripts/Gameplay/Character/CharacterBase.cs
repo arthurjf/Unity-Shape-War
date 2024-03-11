@@ -6,7 +6,7 @@ namespace br.com.arthurjf.shapewar.Gameplay.Character
     // ABSTRACTION
     public abstract class CharacterBase : MonoBehaviour
     {
-        public event Action<CharacterBase> OnDied;
+        public static event Action<CharacterBase> OnDied;
 
         [SerializeField] private int m_health = 10;
         [SerializeField] protected float m_moveSpeed = 2f;
