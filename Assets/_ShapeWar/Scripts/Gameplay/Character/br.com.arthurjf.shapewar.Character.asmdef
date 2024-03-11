@@ -1,7 +1,9 @@
 {
     "name": "br.com.arthurjf.shapewar.Character",
     "rootNamespace": "br.com.arthurjf.shapewar.Character",
-    "references": [],
+    "references": [
+        "GUID:b38c4338dc20579478bdba29bd67f2d8"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

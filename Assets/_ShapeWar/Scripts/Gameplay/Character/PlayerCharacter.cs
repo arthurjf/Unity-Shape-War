@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace br.com.arthurjf.shapewar.Character
@@ -25,6 +24,11 @@ namespace br.com.arthurjf.shapewar.Character
         {
             _inputs.x = Input.GetAxis("Horizontal");
             _inputs.y = Input.GetAxis("Vertical");
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Shoot();
+            }
         }
 
         private void FixedUpdate()

@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4329623875271168074, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
+      propertyPath: fireRate
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5658560602472339787, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -122,6 +126,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8916204167621467621}
   m_SourcePrefab: {fileID: 100100000, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
+--- !u!114 &6377371282055785608 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4329623875271168074, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
+  m_PrefabInstance: {fileID: 7247717445092310210}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9174660296396082532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4d43b1d3d7ddf41a3c74c06ac04ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9174660296396082532 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2001815347651506598, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
@@ -169,6 +184,7 @@ MonoBehaviour:
   m_health: 10
   m_moveSpeed: 100
   m_rotateSpeed: 150
+  m_gun: {fileID: 6377371282055785608}
   m_rigidbody: {fileID: 3044586341469744016}
   m_maxSpeed: 9
 --- !u!114 &8916204167621467621

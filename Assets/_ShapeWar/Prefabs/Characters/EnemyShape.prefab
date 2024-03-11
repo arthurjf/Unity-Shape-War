@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShape
       objectReference: {fileID: 0}
+    - target: {fileID: 2001815347651506598, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3921698885744772436, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
       propertyPath: m_Color.b
       value: 0.21813814
@@ -36,6 +40,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.3584906
       objectReference: {fileID: 0}
+    - target: {fileID: 4209908459468302707, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5658560602472339787, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
       propertyPath: m_Color.b
       value: 0.5424528
@@ -43,6 +51,18 @@ PrefabInstance:
     - target: {fileID: 5658560602472339787, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
       propertyPath: m_Color.g
       value: 0.5424528
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747916490295592839, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5926417904501991474, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317129205591740893, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8084142393724768999, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -92,6 +112,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1245673895839967216}
   m_SourcePrefab: {fileID: 100100000, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
+--- !u!114 &4822425575414348659 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4329623875271168074, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
+  m_PrefabInstance: {fileID: 9149444702267910969}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7295474092716808863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4d43b1d3d7ddf41a3c74c06ac04ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7295474092716808863 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2001815347651506598, guid: 37a06b348a15a7e48abde7885779e3fd, type: 3}
@@ -112,6 +143,12 @@ MonoBehaviour:
   m_health: 3
   m_moveSpeed: 2
   m_rotateSpeed: 75
+  m_gun: {fileID: 4822425575414348659}
   m_target: {fileID: 0}
   m_followDistance: 5
   m_moveSmoothTime: 0.8
+  m_sightRadius: 3
+  m_shootDistance: 15
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 247

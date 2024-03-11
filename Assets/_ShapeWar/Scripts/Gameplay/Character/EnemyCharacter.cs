@@ -8,6 +8,9 @@ namespace br.com.arthurjf.shapewar.Character
         [SerializeField] private Transform m_target;
         [SerializeField] private float m_followDistance = 5f;
         [SerializeField] private float m_moveSmoothTime = 0.8f;
+        [SerializeField] private float m_sightRadius = 3f;
+        [SerializeField] private float m_shootDistance = 6f;
+        [SerializeField] private LayerMask m_layerMask;
 
         private float _maxRotationPerFrame;
         private float _smoothedVelocityInput;
@@ -16,6 +19,11 @@ namespace br.com.arthurjf.shapewar.Character
         private void Update()
         {
             var targetVelocityInput = 0f;
+
+            if (HasTargetOnSight())
+            {
+                Shoot();
+            }
 
             if (m_target != null)
             {
@@ -27,7 +35,6 @@ namespace br.com.arthurjf.shapewar.Character
 
                 var distanceToTarget = Vector3.Distance(transform.position, m_target.position);
 
-
                 if (distanceToTarget > m_followDistance)
                 {
                     targetVelocityInput = m_moveSpeed;
@@ -36,6 +43,20 @@ namespace br.com.arthurjf.shapewar.Character
             _smoothedVelocityInput = Mathf.SmoothDamp(_smoothedVelocityInput, targetVelocityInput, ref _smoothVelocity, m_moveSmoothTime);
 
             Move(_smoothedVelocityInput);
+        }
+
+        private bool HasTargetOnSight()
+        {
+            var hit = Physics2D.CircleCast(transform.position, m_sightRadius, transform.up, m_shootDistance, m_layerMask);
+
+            if (hit.collider != null)
+            {
+                PlayerCharacter playerCharacter = hit.collider.GetComponent<PlayerCharacter>();
+
+                return playerCharacter != null;
+            }
+
+            return false;
         }
 
         // POLYMORPHISM
