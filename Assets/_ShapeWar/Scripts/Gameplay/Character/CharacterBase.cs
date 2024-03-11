@@ -21,7 +21,10 @@ namespace br.com.arthurjf.shapewar.Character
 
         protected abstract void Move(float amount);
 
-        protected abstract void Rotate(float amount);
+        protected virtual void Rotate(float amount)
+        {
+            transform.Rotate(amount * m_rotateSpeed * Time.fixedDeltaTime * -transform.forward);
+        }
 
         protected virtual void Die()
         {

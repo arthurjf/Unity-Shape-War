@@ -49,11 +49,5 @@ namespace br.com.arthurjf.shapewar.Character
         {
             m_rigidbody.AddForce(amount * transform.up, ForceMode2D.Force);
         }
-
-        // POLYMORPHISM
-        protected override void Rotate(float amount)
-        {
-            transform.Rotate(amount * m_rotateSpeed * Time.fixedDeltaTime * -transform.forward);
-        }
     }
 }
