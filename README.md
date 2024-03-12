@@ -6,6 +6,10 @@ Unity final project of the [Junior Programmer Pathway](https://learn.unity.com/l
 
 Take command of a blue spacecraft and eliminate the red ones. Survive as long as possible and aim to surpass your own high score.
 
+## Play the Game
+
+You can play the game by [clicking here](https://play.unity.com/mg/other/shapewar)
+
 ![Showcase Gif](showcase.gif)
 
 ### Unity Version
